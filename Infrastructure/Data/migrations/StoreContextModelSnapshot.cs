@@ -83,21 +83,21 @@ namespace Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Core.Entities.Product", b =>
                 {
-                    b.HasOne("Core.Entities.ProductBrand", "ProductBrands")
+                    b.HasOne("Core.Entities.ProductBrand", "ProductBrand")
                         .WithMany()
                         .HasForeignKey("ProductBrandId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Entities.ProductType", "ProductTypes")
+                    b.HasOne("Core.Entities.ProductType", "ProductType")
                         .WithMany()
                         .HasForeignKey("ProductTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ProductBrands");
+                    b.Navigation("ProductBrand");
 
-                    b.Navigation("ProductTypes");
+                    b.Navigation("ProductType");
                 });
 #pragma warning restore 612, 618
         }
