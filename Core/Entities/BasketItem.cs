@@ -1,3 +1,5 @@
+using Core.Entities.OrderAggregate;
+
 namespace Core.Entities
 {
     public class BasketItem
@@ -10,5 +12,9 @@ namespace Core.Entities
         public string Brand { get; set; }
         public string Type { get; set; }
 
+        public void Add(OrderItem orderItem)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
