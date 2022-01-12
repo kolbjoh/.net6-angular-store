@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './core/guards/auth.guard';
@@ -25,6 +24,12 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: () => import('./checkout/checkout.module').then(mod => mod.CheckoutModule),
     data: { breadcrumb: 'Checkout' }
+  },
+  {
+    path: 'orders', 
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./orders/orders.module').then(mod => mod.OrdersModule),
+    data: { breadcrumb: 'Orders' }
   },
   {
     path: 'account', loadChildren: () => import('./account/account.module').then(mod => mod.AccountModule),

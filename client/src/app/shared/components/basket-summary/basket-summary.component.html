@@ -1,21 +1,21 @@
-<ng-container *ngIf="basket$ | async">
+<ng-container *ngIf="items.length > 0" >
     <div class="table-responsive">
         <table class="table table-borderless">
             <thead [class.thead-light]="isBasket || isOrder" class="border-0 py-2">
                 <tr>
-                    <th scope="col" [class.bg-light]="isBasket" class="border-0">
+                    <th scope="col" >
                         <div class="p-2 px-3 text-uppercase">Product</div>
                     </th>
-                    <th scope="col" [class.bg-light] class="border-0">
-                        <div class="py-2 text-uppercase" >Price</div>
+                    <th scope="col">
+                        <div class="py-2 text-uppercase">Price</div>
                     </th>
-                    <th scope="col" [class.bg-light] class="border-0">
+                    <th scope="col">
                         <div class="py-2 text-uppercase">Quantity</div>
                     </th>
-                    <th scope="col" [class.bg-light] class="border-0">
+                    <th scope="col">
                         <div class="py-2 text-uppercase">Total</div>
                     </th>
-                    <th *ngIf="isBasket" scope="col" class="border-0" [class.bg-light]>
+                    <th *ngIf="isBasket" scope="col" class="border-0">
                         <div class="py-2 text-uppercase">Remove</div>
                     </th>
                 </tr>
